@@ -7,6 +7,12 @@ name = "pypi"
 pytest = "*"
 
 [dev-packages]
+autopep8 = "*"
+flake8 = "*"
 
 [requires]
 python_version = "3.8"
+
+[scripts]
+lint = "flake8"
+format = "autopep8 -ir ."

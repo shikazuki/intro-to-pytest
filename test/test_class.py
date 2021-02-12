@@ -86,5 +86,4 @@ def test_get_person():
 def test_not_get_person():
     p = Person(1, 'hoge', 'fuga')
     PersonCache.add(p)
-    assert PersonCache.get(2) == None
-
+    assert PersonCache.get(2) is None
