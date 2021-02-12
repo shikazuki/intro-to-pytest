@@ -1,4 +1,4 @@
-from typing import Union
+from typing import Optional
 import pytest
 
 
@@ -35,7 +35,7 @@ class PersonCache:
             cls.cache.pop(key)
 
     @classmethod
-    def get(cls, key: int) -> Union[Person, None]:
+    def get(cls, key: int) -> Optional[Person]:
         if key in cls.cache:
             return cls.cache[key]
         return None
